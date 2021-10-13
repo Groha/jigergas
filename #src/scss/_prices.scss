@@ -1,0 +1,128 @@
+.prices {
+   background: $base-background;
+   padding: 43px 0 90px;
+
+   @media (max-width: 768px) {
+      padding: 35px 0;
+   }
+
+   &__title {
+      margin-bottom: 50px;
+
+      @media (max-width: 768px) {
+         margin-bottom: 25px;
+      }
+   }
+
+   &__cards {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 992px) {
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+
+   &__card {
+      width: 350px;
+      height: 600px;
+      background: #DDECFF;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.13);
+      border-radius: 35px;
+      padding: 25px 13px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 1s ease;
+
+      @media (max-width: 992px) {
+         &:not(:last-child) {
+            margin-bottom: 25px;
+         }
+      }
+
+      &--title {
+         color: $color-blue;
+         font-family: $base-font;
+         font-weight: normal;
+         font-size: 22px;
+         line-height: 27px / 22px * 100%;
+         margin-bottom: 7px;
+         text-align: center;
+         transition: 1s ease;
+      }
+
+      &:hover &--title {
+         color: #fff;
+      }
+
+      &--price {
+         color: $color-orange;
+         font-family: $base-font;
+         font-weight: normal;
+         font-size: 24px;
+         line-height: 29px / 24px * 100%;
+         margin-bottom: 15px;
+         transition: 1s ease;
+      }
+
+      &--img {
+         width: 220px;
+         height: 220px;
+         border-radius: 20px;
+         overflow: hidden;
+         margin-bottom: 20px;
+      }
+
+      &--services {
+         color: $color-blue;
+         font-family: $base-font;
+         font-weight: normal;
+         font-size: 18px;
+         line-height: 22px / 18px * 100%;
+         margin-bottom: 20px;
+         transition: 1s ease;
+      }
+
+      &:hover &--services {
+         color: #fff;
+      }
+
+      &--btn {
+         width: 255px;
+         border: 1px solid $color-blue;
+         box-sizing: border-box;
+         border-radius: 10px;
+         background: #DDECFF;
+         padding: 16px;
+         font-family: $base-font;
+         font-weight: normal;
+         font-size: 18px;
+         line-height: 22px / 18px * 100%;
+         color: $color-blue;
+         margin-top: 6px;
+         transition: 1s ease;
+         cursor: pointer;
+      } 
+
+      &:hover &--btn {
+         background: $color-orange;
+         border: 1px solid #FFFFFF;
+         color: #fff;
+      }
+
+      &:hover &--btn:hover {
+         background: #d1760e;
+      }
+
+      &:hover {
+         background: $color-grey;
+      }
+   }
+}
+
+.icon-checkmark::before {
+   color: $color-orange;
+   margin-right: 22px;
+}

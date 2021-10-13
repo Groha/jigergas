@@ -1,0 +1,136 @@
+.footer {
+   background: #13284F;
+   padding: 40px 0 45px;
+
+   &__container {
+      @media (max-width: 768px) {
+         margin: 0 auto;
+      }
+   }
+
+   &__menu {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 35px;
+
+      @media (max-width: 768px) {
+         flex-direction: column;
+      }
+   }
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 768px) {
+         flex-direction: column;
+      }
+   }
+
+   &__socials {
+      display: flex;
+
+      &-item {
+         display: block;
+         width: 35px;
+         height: 35px;
+         overflow: hidden;
+         margin-right: 30px;
+
+         & img {
+            width: 100%;
+         }
+
+         @media (max-width: 768px) {
+            margin-bottom: 25px;
+            &:last-child {
+               margin-right: 0;
+            }
+         }
+      }
+   }
+}
+
+.menu-footer {
+
+   &__column {
+      display: flex;
+
+      @media (max-width: 768px) {
+         &:not(:last-child) {
+            margin-bottom: 55px;
+         }
+      }
+   }
+
+   &__nav:not(:last-child) {
+      margin-right: 100px;
+   }
+
+   &__list {
+      padding: 0;
+      margin: 0;
+   }
+
+   &__item {
+      list-style-type: none;
+
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__link {
+      font-family: $base-font;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17 / 14 * 100%;
+      color: #FFFFFF;
+   }
+
+   &__contact {
+      display: block;
+      position: relative;
+      font-family: $base-font;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17 / 14 * 100%;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+         margin-bottom: 31px;
+      }
+
+      & span {
+         display: block;
+         position: absolute;
+         left: 45px;
+         bottom: -15px;
+         font-family: $base-font;
+         font-weight: normal;
+         font-size: 10px;
+         color: rgba(255, 255, 255, 0.7);
+      }
+   }
+
+   &__phone {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+   }
+
+   &__mail-transparent {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+   }
+
+   &__location {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+   }
+}

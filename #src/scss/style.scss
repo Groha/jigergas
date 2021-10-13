@@ -1,0 +1,109 @@
+@import 'icon_fonts';
+
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../fonts/Gilroy-SemiBold.eot');
+   src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
+       url('../fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gilroy-SemiBold.woff') format('woff'),
+       url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
+   font-weight: 600;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../fonts/Gilroy-Bold.eot');
+   src: local('Gilroy Bold'), local('Gilroy-Bold'),
+       url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gilroy-Bold.woff') format('woff'),
+       url('../fonts/Gilroy-Bold.ttf') format('truetype');
+   font-weight: 700;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../fonts/Gilroy-Regular.eot');
+   src: local('Gilroy Regular'), local('Gilroy-Regular'),
+       url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gilroy-Regular.woff') format('woff'),
+       url('../fonts/Gilroy-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+$base-font: "Gilroy";
+$color-orange: #EF8711;
+$color-blue: #0297F1;
+$color-grey: #13284F;
+$color-lightgrey: #85888F;
+$base-background: linear-gradient(180deg, #DDECFF 0%, #F7FAFF 51.04%, #DDECFF 100%);
+
+* {
+   box-sizing: border-box;
+   text-decoration: none;
+}
+
+.wrapper {
+   font-family: $base-font;
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1168px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+@import 'header';
+
+@import 'main';
+
+.btn {
+   width: 255px;
+   border-radius: 10px;
+   background-color: $color-blue;
+   border: none;
+   text-align: center;
+   color: #fff;
+   font-family: $base-font;
+   font-size: 20px;
+   line-height: 24px / 20px * 100%;
+   font-weight: 400;
+   padding: 15px;
+   cursor: pointer;
+
+   &:hover {
+      background: #39a5e7;
+   }
+}
+
+.title-h2 {
+   font-family: $base-font;
+   font-weight: 600;
+   font-size: 38px;
+   line-height: 47px / 38px * 100%;
+   color: $color-blue;
+   text-align: center;
+   margin: 0;
+
+   @media (max-width: 576px) {
+      font-size: 28px;
+   }
+}
+
+@import 'direction';
+
+@import 'gasometr';
+
+@import 'prices';
+
+@import 'benefits';
+
+@import 'tasks';
+
+@import 'sertificates';
+
+@import 'faq';
+
+@import 'application';
+
+@import 'footer';

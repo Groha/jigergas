@@ -1,0 +1,32 @@
+.gasometer {
+   padding: 45px 0 75px;
+   background: url('../img/ellipse.png'), $base-background;
+
+   @media (max-width: 992px) {
+      display: none;
+   }
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__title {
+      max-width: 871px;
+      margin-bottom: 50px;
+      align-self: center;
+   }
+
+   &__info {
+      display: flex;
+      align-items: center;
+   }
+
+   &__img {
+      width: 444px;
+      height: 444px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 60px;
+   }
+}

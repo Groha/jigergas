@@ -1,0 +1,133 @@
+.application {
+   background: $base-background;
+   padding-bottom: 90px;
+
+   @media (max-width: 768px) {
+      padding-bottom: 35px;
+   }
+   
+   &__title {
+      margin-bottom: 105px;
+
+      @media (max-width: 768px) {
+         margin-bottom: 65px;
+      }
+   }
+
+   &__body {
+      padding: 75px 120px 75px 25px;
+      background: linear-gradient(45deg, #EF8711, #49B8FB, #EF8711);
+      display: flex;
+      justify-content: flex-end;
+      border-radius: 15px;
+      position: relative;
+
+      @media (max-width: 992px) {
+         padding: 75px 25px;
+      }
+
+      @media (max-width: 885px) {
+         flex-direction: column;
+         padding: 0 25px;
+         align-items: center;
+      }
+
+      &-image {
+         flex: 0 0 auto;
+         width: 380px;
+         height: 480px;
+         overflow: hidden;
+         border-radius: 15px 90px;
+         position: absolute;
+         top: -65px;
+         left: 25px;
+
+         & img {
+            width: 100%;
+         }
+
+         @media (max-width: 992px) {
+            width: 340px;
+            height: 430px;
+            top: -45px;
+         }
+
+         @media (max-width: 885px) {
+            position: static;
+            transform: translateY(-30px);
+         }
+
+         @media (max-width: 576px) {
+            width: 225px;
+            height: 284px;
+         }
+      }
+
+      &-info {
+        flex: 0 1 470px;
+        text-align: center;
+
+         @media (max-width: 992px) {
+            flex: 0 0 auto;
+         }
+      }
+
+      &-tel {
+         font-family: $base-font;
+         font-weight: normal;
+         font-size: 36px;
+         line-height: 44 / 36 * 100%;
+         color: #FFFFFF;
+
+         & span {
+            font-weight: 600;
+         }
+
+         @media (max-width: 992px) {
+            font-size: 32px;
+         }
+
+         @media (max-width: 576px) {
+            font-size: 26px;
+         }
+      }
+
+      &-text {
+         font-family: $base-font;
+         font-weight: normal;
+         font-size: 24px;
+         line-height: 29 / 24 * 100%;
+         color: #FFFFFF;
+
+         @media (max-width: 992px) {
+            font-size: 20px;
+         }
+
+         @media (max-width: 576px) {
+            max-width: 282px;
+            margin: 15px auto 50px;
+            font-weight: 300;
+         }
+      }
+
+      &-btn {
+         margin: 15px;
+         padding: 12px;
+         font-family: $base-font;
+         font-weight: 600;
+         font-size: 18px;
+         line-height: 22 / 18 * 100%;
+         color: $color-orange;
+         background: #fff;
+
+         &:hover {
+            background: rgb(223, 226, 250);
+            color: $color-blue;
+         }
+
+         @media (max-width: 576px) {
+            margin-bottom: 40px;
+         }
+      }
+   }
+}
