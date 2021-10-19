@@ -881,16 +881,15 @@
 }
 
 .tasks__slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "img text-1" "img text-2";
 }
 
 .tasks__slide--img {
+  grid-area: img;
+  grid-row-start: 1;
+  grid-row-end: 3;
   width: 600px;
   height: 400px;
   background: rgba(19, 40, 79, 0.26);
@@ -956,6 +955,34 @@
           justify-content: space-between;
 }
 
+.tasks__slide--tasks {
+  grid-area: text-1;
+}
+
+.tasks__slide--task {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 120.8333333333%;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.tasks__slide--about {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.tasks__slide--result {
+  grid-area: text-2;
+}
+
+.tasks__slide--result .body__slide--about:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .tasks__request {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
@@ -1000,26 +1027,6 @@
   padding: 20px 30px;
   border: 1px solid #D8D8D8;
   border-radius: 15px;
-}
-
-.body__slide--task {
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 120.8333333333%;
-  margin: 0;
-  margin-bottom: 15px;
-}
-
-.body__slide--about {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 122.2222222222%;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.body__slide--result .body__slide--about:not(:last-child) {
-  margin-bottom: 20px;
 }
 
 .strong__bluetext {
@@ -1579,6 +1586,13 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .tasks__slide {
+    grid-template-columns: 1fr;
+    grid-template-areas: "text-1" "img" "text-2";
+  }
+}
+
 @media (max-width: 992px) {
   .header__container {
     -webkit-box-orient: horizontal;
@@ -1662,24 +1676,6 @@
 
   .tasks__slider--wrapper {
     margin: 0 auto;
-  }
-
-  .tasks__slide--img {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-
-  .tasks__slide--body {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-
-  .tasks__slide--result {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
   }
 
   .tasks__request {
