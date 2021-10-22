@@ -35,8 +35,7 @@
       font-weight: 700;
       font-size: 48px;
       line-height: 59px / 48px * 100%;
-      // color: #fff;
-      color: darkblue;
+      color: #fff;
       margin-bottom: 5px;
 
       @media (max-width: 992px) {
@@ -79,10 +78,6 @@
       @media (max-width: 576px) {
          bottom: -230px;
       }
-
-      // @media (max-width: 410px) {
-      //    bottom: -120px;
-      // }
    }
 
    &__img {

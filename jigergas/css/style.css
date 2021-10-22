@@ -367,7 +367,7 @@
   font-weight: 700;
   font-size: 48px;
   line-height: 122.9166666667%;
-  color: darkblue;
+  color: #fff;
   margin-bottom: 5px;
 }
 
@@ -469,14 +469,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .direction__card {
   background: #fff;
-  width: 350px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 350px;
+          flex: 0 0 350px;
   -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.14);
           box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.14);
   border-radius: 10px;
@@ -1215,6 +1214,7 @@
   width: 22px;
   height: 15px;
   position: relative;
+  cursor: pointer;
 }
 
 .licenses-slider-button-next img {
@@ -1251,6 +1251,7 @@
   width: 22px;
   height: 15px;
   position: relative;
+  cursor: pointer;
 }
 
 .thanks-slider-button-next img {
@@ -1275,6 +1276,7 @@
 .faq__question {
   padding: 25px 30px;
   border-top: 1px solid #C6E0FF;
+  cursor: pointer;
 }
 
 .faq__question:last-child {
@@ -1641,12 +1643,10 @@
   }
 
   .direction__cards {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    overflow-x: scroll;
-    width: auto;
-    white-space: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow: auto;
+    width: 100%;
   }
 
   .gasometer {
@@ -1825,7 +1825,9 @@
   }
 
   .direction__card {
-    width: 250px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 250px;
+            flex: 0 0 250px;
   }
 
   .direction__card--text {
@@ -1932,7 +1934,9 @@
   }
 
   .direction__card {
-    width: 200px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 200px;
+            flex: 0 0 200px;
   }
 
   .direction__card--text {
