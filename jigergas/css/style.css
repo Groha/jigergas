@@ -1013,7 +1013,7 @@
 }
 
 .tasks__request--form {
-  max-width: 315px;
+  max-width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1989,6 +1989,10 @@
 
   .strong__bluetext {
     font-size: 22px;
+  }
+
+  .faq__question {
+    padding: 20px 0;
   }
 
   .faq__question-icon {

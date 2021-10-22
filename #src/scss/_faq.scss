@@ -23,6 +23,10 @@
       border-top: 1px solid #C6E0FF;
       cursor: pointer;
 
+      @media (max-width: 576px) {
+         padding: 20px 0;
+      }
+
       &:last-child {
          border-bottom: 1px solid #C6E0FF;
       }
