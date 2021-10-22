@@ -1,29 +1,33 @@
 .tasks {
-  background: $base-background;
-  padding: 55px 0;
+   background: $base-background;
+   padding: 55px 0;
 
-  @media (max-width: 768px) {
-    padding: 25px 0 35px;
-  }
+   @media (max-width: 768px) {
+      padding: 25px 0 35px;
+   }
 
-  &__container {
-    position: relative;
-  }
+   &__container {
+      position: relative;
+   }
 
-  &__title {
-    margin-bottom: 50px;
+   &__title {
+      margin-bottom: 50px;
 
-    @media (max-width: 768px) {
+      @media (max-width: 768px) {
       margin-bottom: 35px;
-    }
+      }
 
-    @media (max-width: 576px) {
+      @media (max-width: 576px) {
       margin-bottom: 20px;
-    }
-  }
+      }
+   }
 
-  &__slider {
-   margin-bottom: 60px;
+   &__slider {
+      margin-bottom: 60px;
+
+      @media (max-width: 576px) {
+         margin-bottom: 50px;
+      }
 
       &--wrapper {
       padding-bottom: 20px;
@@ -31,52 +35,59 @@
       @media (max-width: 992px) {
          margin: 0 auto;
       }
-   }
+      }
 
-   .swiper-pagination {
-   position: relative;
-   text-align: left;
-   margin-left: 270px;
-   }
+      .swiper-pagination {
+      position: relative;
+      text-align: left;
+      margin-left: 270px;
+      }
 
-   .swiper-pagination {
-   position: relative;
-   text-align: left;
-   margin-left: 270px;
-   }
+      .swiper-pagination {
+      position: relative;
+      text-align: left;
+      margin-left: 270px;
+      @media (max-width: 992px) {
+         display: none;
+      }
+      }
 
-   .swiper-pagination-bullet {
-   width: 10px;
-   height: 10px;
-   }
+      .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      }
 
-   .swiper-button-next {
-   top: 77%;
-   left: 530px;
-   }
+      .swiper-button-next {
+      top: 76%;
+      right: 51%;
 
-   // .swiper-slide-active .tasks__slide--img::after {
-   // content: "";
-   // display: block;
-   // width: 600px;
-   // height: 400px;
-   // position: absolute;
-   // top: 0;
-   // background: rgba(19, 40, 79, 0.26);
-   // border-radius: 20px;
-   // }
+      @media (max-width: 992px) {
+         right: 25px;
+         top: 74%;
+      }
 
-   .swiper-button-next::after {
-   content: url(../img/arrow.png);
+      @media (max-width: 778px) {
+         top: 70%;
+      }
+      @media (max-width: 630px) {
+         top: 65%;
+      }
+      @media (max-width: 450px) {
+         top: 60%;
+      }
+      }
+
+      .swiper-button-next::after {
+         content: url(../img/arrow.png);
+      }
    }
-  }
 
   &__slide {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "img text-1" "img text-2";
 
-    @media (max-width: 1200px) {
+    @media (max-width: 992px) {
       grid-template-columns: 1fr;
       grid-template-areas: "text-1" "img" "text-2";
       gap: 20px;
@@ -92,6 +103,11 @@
       margin-right: 30px;
       position: relative;
 
+      @media (max-width: 992px) {
+        width: 100%;
+        height: 100%;
+      }
+
       & img {
         display: block;
         width: 100%;
@@ -100,14 +116,14 @@
       }
 
       &::after {
-         content: "";
-         display: block;
-         width: 100%;
-         height: 100%;
-         position: absolute;
-         top: 0;
-         background: rgba(19, 40, 79, 0.26);
-         border-radius: 20px;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background: rgba(19, 40, 79, 0.26);
+        border-radius: 20px;
       }
     }
 
@@ -121,6 +137,11 @@
       z-index: 2;
       top: 33px;
       left: 45px;
+
+      @media (max-width: 576px) {
+         top: 15px;
+         left: 20px;
+      }
     }
 
     &--info {
@@ -128,6 +149,11 @@
       left: 46px;
       bottom: 43px;
       z-index: 2;
+
+      @media (max-width: 576px) {
+         bottom: 15px;
+         left: 20px;
+      }
     }
 
     &--name,
@@ -163,6 +189,10 @@
       line-height: 29px / 24px * 100%;
       margin: 0;
       margin-bottom: 15px;
+
+      @media (max-width: 576px) {
+         font-size: 22px;
+      }
     }
 
     &--about {
@@ -247,6 +277,10 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 29px / 24px * 100%;
+
+  @media (max-width: 576px) {
+   font-size: 22px;
+  }
 }
 
 .bluetext {
